@@ -1,5 +1,5 @@
 body {
-    background-image: url("http://angsila.cs.buu.ac.th/~58160640/887371/lab02/b3.jpg");
+    background-image: url("http://angsila.cs.buu.ac.th/~58160640/887371/lab02/picture/b3.jpg");
     background-repeat: no-repeat;
 }
 
@@ -57,23 +57,54 @@ li a:hover:not(.active) {
 font:14px Trebuchet MS, Tahoma;
 margin: 80px;
 width: 1080px;
-border-collapse: collapse;
+border-collapse: initial;
 text-align: center;
 }
 .simply th{
 font:normal 16px Trebuchet MS, Tahoma;
-color: #222;
-background:#cbeffd;
+color: #FFFF00;
+background:#FF6600;
 padding: 10px 8px;
 border-bottom: 2px solid #ccc;
 }
 .simply td{
 border-bottom: 1px solid #ccc;
-color: #666;
+color: #FF6600;
 background: #fff;
 padding: 5px;
 }
 .simply tbody tr:hover td{
-color: #222;
-background: #eee;
+color: #000000;
+background: #CCFF66;
+}
+
+
+
+
+
+
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 200px;
+}
+
+div.img:hover {
+    border:3px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: auto;
+    text-align: center;
+}
+
+
+img {
+    border-radius: 5px;
 }
