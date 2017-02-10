@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Short Stack');
+@import url('https://fonts.googleapis.com/css?family=Fredericka the Great');
+
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1700px}
+
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #FFD2D2;
+      height: 100%;
+      color: white;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #FFD2D2;
+      color: white;
+      padding: 15px;
+      
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+
+    }
+
+     body {
+      font-family: 'Short Stack', cursive;
+
+
+    }
+    header {
+      background: #FFD2D2;
+      padding: 15px;
+      font-family: 'Fredericka the Great', cursive;
+      color: white;
+
+      
+}

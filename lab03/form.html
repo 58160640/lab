@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>การใช้งาน Form ใน Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Short Stack');
+@import url('https://fonts.googleapis.com/css?family=Fredericka the Great');
+
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1700px}
+
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #FFD2D2;
+      height: 100%;
+      color: white;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #FFD2D2;
+      color: white;
+      padding: 15px;
+      
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+
+    }
+
+     body {
+      font-family: 'Short Stack', cursive;
+
+
+    }
+    header {
+      background: #FFD2D2;
+      padding: 15px;
+      font-family: 'Fredericka the Great', cursive;
+      color: white;
+
+      
+}
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>การใช้งาน Form ใน Bootstrap</h1>      
+    <p>By luislecce</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Web programing</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://angsila.cs.buu.ac.th/~58160640/887371/lab03/lab03.html">หน้าแรก</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58160640/887371/lab03/grid.html">การใช้งาน Grid ใน Bootstrap</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58160640/887371/lab03/from.html">การใช้งาน Form ใน bootstrap</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="col-sm-9">
+      <h2>การใช้งาน Form</h2>
+      
+      <p>
+การใช้ CSS เพื่อกำหนดรูปแบบต่างๆ ให้กับคอนโทรลต่างๆ ของฟอร์มในเอกสารนั้น Bootstrap มี คลาสที่หลากหลายที่จะช่วยให้เราสามารถปรับปต่างคอนโทรลต่างๆ ของฟอร์มให้ดูสวยงาม และ น่าใช้งานมากยิ่งขึ้น โดยเราสามารถใช้คลาสต่างๆ ได้กับแท็ก < input >, < textarea > และ < select > โดยเราต้องทำการเพิ่มคลาส .form-control ให้กับคอนโทรลเหล่านั้น โดยความกว้างของคอนโทรล นั้นจะกว้าง 100% เป็นค่าเริ่มต้น แต่เราสามารถกำหนดค่าความกว้างให้เป็นตามที่เราต้องการได้ โดยการใช้สไตล์ซีท style="width: XXXpx;" และใช้งานร่วมกับ Grid ได้โดยความกว้างจะได้ขนาด เท่ากับขนาดของ Grid ตัวอย่างฟอร์ม
+<br><h2>ตัวอย่างการสร้างฟอร์ม</h2><br>
+</p>
+<footer class="container-fluid">
+ <div><pre class="html" >
+  <code class="num">1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;form</code> <code class="blue">role=</code><code class="red">"form"</code><code class="green">&gt;</code>
+  <code class="num">2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"form-group"</code><code class="green">&gt;</code>
+  <code class="num">3</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label</code> <code class="blue">for=</code><code class="red">"txt_email"</code><code class="green">&gt;</code>Email address<code class="green">&lt;/label&gt;</code>
+  <code class="num">4</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"email"</code> <code class="blue">class=</code><code class="red">"form-control"</code>
+  <code class="num">5</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">id=</code><code class="red">"txt_email"</code> <code class="blue">placeholder=</code><code class="red">"Enter email"</code><code class="green">&gt;</code>
+  <code class="num">6</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">7</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"form-group"</code><code class="green">&gt;</code>
+  <code class="num">8</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label</code> <code class="blue">for=</code><code class="red">"txt_pass"</code><code class="green">&gt;</code>Password<code class="green">&lt;/label&gt;</code>
+  <code class="num">9</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"password"</code> <code class="blue">class=</code><code class="red">"form-control"</code>
+  <code class="num">10</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">id=</code><code class="red">"txt_pass"</code> <code class="blue">placeholder=</code><code class="red">"Password"</code><code class="green">&gt;</code>
+  <code class="num">11</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">12</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;button</code> <code class="blue">type=</code><code class="red">"submit"</code> <code class="blue">class=</code><code class="red">"btn btn-default"</code><code class="green">&gt;</code>
+  <code class="num">13</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Submit
+  <code class="num">14</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/button&gt;</code>
+  <code class="num">15</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/form&gt;</code></pre></div>
+  </footer>
+
+
+<div class="col-sm-9">
+      <h3> Inline form </h3>
+      
+      <p>
+ การกำหนดรูปแบบ inline form เป็นการทำให้คอนโทรลต่างๆ ของฟอร์มอยู่ในแถวเดียวกัน โดย โดยปกติแล้วหากเราไม่กำหนดค่า .form- inline ในแท็ก < form > คอนโทรลต่างๆ ของฟอ์มจะอยู่ คนละแถว หรือคนละบรรทัด เหมือนกับตัวอย่างแรก แต่หากเรากำหนดค่า .form- inliine เข้าไป คอนโทรลต่างๆ จะอยู่ในแถวเดียวกัน ในการทำ inline form นั้นเราจะต้องทำการกำหนดค่าความ กว้างของคอนโทรล โดยการใช้สไตล์ซีทกำหนดค่า ซึ่งตัวอย่างจะใช้width ในการกำหนดค่าความ กว้างของคอนโทรล หากเราไม่กำหนดเบราเซอร์จะแสดงความกว้างเต็ม 100% ซึ่งจะไม่เห็นความ แตกต่างในการใช้.form-inlineและหากเราไม่ต้องการให้แสดง < label > เราสามารถกำหนดคลาส.sr-only ให้กับ < label > ได้ </p><br>
+ <div class="col-sm-9"><p>
+ <h4>Horizontal form</h4>  เราสามารถจัดกลุ่มของคอนโทรลกับลาเบล (Label)ให้อยู่ในลักษณะของคอลัมน์ โดยการใช้.form-horizontal ร่วมกับกริด (Grid) และ .form-group ในการแบ่งคอลัมน์<br>
+</p>
+
+      <br><br>
+      
+      
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+
+
+</body>
+</html>

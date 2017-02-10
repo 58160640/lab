@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>การใช้งาน Grid ใน Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Short Stack');
+@import url('https://fonts.googleapis.com/css?family=Fredericka the Great');
+
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1700px}
+
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #FFD2D2;
+      height: 100%;
+      color: white;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #FFD2D2;
+      color: white;
+      padding: 15px;
+      
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+
+    }
+
+     body {
+      font-family: 'Short Stack', cursive;
+
+
+    }
+    header {
+      background: #FFD2D2;
+      padding: 15px;
+      font-family: 'Fredericka the Great', cursive;
+      color: white;
+
+      
+}
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>การใช้งาน Grid ใน Bootstrap</h1>      
+    <p>By luislecce</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Web programing</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://angsila.cs.buu.ac.th/~58160640/887371/lab03/lab03.html">หน้าแรก</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58160640/887371/lab03/grid.html">การใช้งาน Grid ใน Bootstrap</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58160640/887371/lab03/from.html">การใช้งาน Form ใน bootstrap</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="col-sm-9">
+      <h2>Grid System คืออะไร ?</h2>
+      
+      <p>
+ถ้าพูดกันแบบบ้านๆ ทั่วไปเราก็คงจะบอกว่าเป็น Layout ที่คอยควบคุมวัตถุต่างๆ บนหน้าเว็บไซต์ให้แสดงผลได้อย่างถูกต้องตามหลัก box layout ซึ่งจะส่งผลดีต่อการเขียนหนึ่งหน้าเว็บไซต์ แต่สามารถใช้ร่วมกับอุปกรณ์ทุกขนาดหน้าจอ Grid system ของ Bootstrap เอง แบ่งออกเป็น 12 คอลัมน์ ถ้าให้เห็นภาพง่ายขึ้นก็น่าจะต้องบอกว่า เหมือนกับตาราง 1 แถว มี 12 คอลัมน์ประมาณนั้น 
+<br><h2>การสร้าง Grid system</h2><br>
+1. ในการสร้าง Grid system นั้น Bootstrap แนะนำให้เราสร้างแถวและคอลัมน์ไว้ใน container โดยคลาส container  ของ Bootstrap  แบ่งออกเป็น 2 ประเภท คือ container และ container-fluid สำหรับ container นั้นจะแสดงผลเนื้อหาตามที่เรากำหนดความกว้างของหน้าจอ ส่วน container-fluid  นั้นจะแสดงผลเนื้อหาเต็มความกว้างของหน้าจอของเรา โดยในที่นี้คือเราจะใช้คลาส container 
+<div class="container">      </div>  
+ 
+2. สร้างแถวโดยใช้  class="row" ภายใต้ class="container" โดยเราสามารถที่จะสร้างแถวได้ไม่จำกัด แต่แถวเหล่านั้นต้องอยู่ภายใต้ class="container"
+<div class="container">
+<div class="row"></div>
+</div>
+3. แต่ละแถวของ Grid system นั้นมีคอลัมน์ในแต่ละแถวได้ 12 คอลัมน์ โดยคอลัมน์ของ Grid system แบ่งออกเป็น 4 ประเภทคือ
+</p>
+
+<div class="container">
+  <h2>Grid system </h2>     
+  <table class="table">
+    <thead>
+      <tr>
+        <th>class</th>
+        <th>ประเภทหน้าจอ</th>
+        <th>ขนาดหน้าจอ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.col-xs-</td>
+        <td>Smart Phone</td>
+        <td>< 768px</td>
+      </tr>
+      <tr>
+        <td>.col-sm-</td>
+        <td>Tablet</td>
+        <td>≥768px</td>
+      </tr>
+      <tr>
+        <td>.col-md-</td>
+        <td>Desktop ขนาดกลาง</td>
+        <td>≥992px</td>
+      </tr>
+      <tr>
+        <td>.col-lg-</td>
+        <td>Desktop ขนาดใหญ่</td>
+        <td>≥1200px</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+      <br><br>
+      
+      
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+
+
+</body>
+</html>

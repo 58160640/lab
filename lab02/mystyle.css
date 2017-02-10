@@ -1,6 +1,7 @@
 body {
     background-image: url("http://angsila.cs.buu.ac.th/~58160640/887371/lab02/picture/b4.jpg");
     background-repeat: repeat;
+    text-align: center;
 }
 
 h1 {
@@ -84,7 +85,7 @@ background: #CCFF66;
 
 
 div.img {
-    margin: 100%;
+    margin: 6px;
     border: 1px solid #ccc;
     float: left;
     width: 200px;
