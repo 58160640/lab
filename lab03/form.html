@@ -1,58 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>การใช้งาน Form ใน Bootstrap</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css?family=Short Stack');
-@import url('https://fonts.googleapis.com/css?family=Fredericka the Great');
-
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1700px}
-
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #FFD2D2;
-      height: 100%;
-      color: white;
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
     }
     
-    /* Set black background color, white text and some padding */
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
     footer {
-      background-color: #FFD2D2;
-      color: white;
-      padding: 15px;
-      
+      background-color: #f2f2f2;
+      padding: 25px;
     }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;} 
-
-    }
-
-     body {
-      font-family: 'Short Stack', cursive;
-
-
-    }
-    header {
-      background: #FFD2D2;
-      padding: 15px;
-      font-family: 'Fredericka the Great', cursive;
-      color: white;
-
-      
-}
   </style>
 </head>
 <body>
@@ -85,336 +56,55 @@
   </div>
 </nav>
 
- <div class="col-sm-9">
-               <p>
-                   <h1>การใช้งาน Form ในภาษา HTML</h1>
-<b>HTML Form</b> ถูกใช้เมื่อต้องการเก็บข้อมูลอะไรบางอย่าง จากผู้เข้าชมเว็บไซต์ เช่น ข้อมูลประจำตัว ข้อมลการเยี่ยมชมต่าง ๆ และอื่น ๆ อีกมาก<br /><br />
+<div class="col-sm-9">
+      <h2>การใช้งาน Form</h2>
+      
+      <p>
+การใช้ CSS เพื่อกำหนดรูปแบบต่างๆ ให้กับคอนโทรลต่างๆ ของฟอร์มในเอกสารนั้น Bootstrap มี คลาสที่หลากหลายที่จะช่วยให้เราสามารถปรับปต่างคอนโทรลต่างๆ ของฟอร์มให้ดูสวยงาม และ น่าใช้งานมากยิ่งขึ้น โดยเราสามารถใช้คลาสต่างๆ ได้กับแท็ก < input >, < textarea > และ < select > โดยเราต้องทำการเพิ่มคลาส .form-control ให้กับคอนโทรลเหล่านั้น โดยความกว้างของคอนโทรล นั้นจะกว้าง 100% เป็นค่าเริ่มต้น แต่เราสามารถกำหนดค่าความกว้างให้เป็นตามที่เราต้องการได้ โดยการใช้สไตล์ซีท style="width: XXXpx;" และใช้งานร่วมกับ Grid ได้โดยความกว้างจะได้ขนาด เท่ากับขนาดของ Grid ตัวอย่างฟอร์ม
+<br><h2>ตัวอย่างการสร้างฟอร์ม</h2><br>
+</p>
+<footer class="container-fluid">
+ <div><pre class="html" >
+  <code class="num">1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;form</code> <code class="blue">role=</code><code class="red">"form"</code><code class="green">&gt;</code>
+  <code class="num">2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"form-group"</code><code class="green">&gt;</code>
+  <code class="num">3</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label</code> <code class="blue">for=</code><code class="red">"txt_email"</code><code class="green">&gt;</code>Email address<code class="green">&lt;/label&gt;</code>
+  <code class="num">4</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"email"</code> <code class="blue">class=</code><code class="red">"form-control"</code>
+  <code class="num">5</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">id=</code><code class="red">"txt_email"</code> <code class="blue">placeholder=</code><code class="red">"Enter email"</code><code class="green">&gt;</code>
+  <code class="num">6</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">7</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;div</code> <code class="blue">class=</code><code class="red">"form-group"</code><code class="green">&gt;</code>
+  <code class="num">8</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;label</code> <code class="blue">for=</code><code class="red">"txt_pass"</code><code class="green">&gt;</code>Password<code class="green">&lt;/label&gt;</code>
+  <code class="num">9</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;input</code> <code class="blue">type=</code><code class="red">"password"</code> <code class="blue">class=</code><code class="red">"form-control"</code>
+  <code class="num">10</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="blue">id=</code><code class="red">"txt_pass"</code> <code class="blue">placeholder=</code><code class="red">"Password"</code><code class="green">&gt;</code>
+  <code class="num">11</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/div&gt;</code>
+  <code class="num">12</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;button</code> <code class="blue">type=</code><code class="red">"submit"</code> <code class="blue">class=</code><code class="red">"btn btn-default"</code><code class="green">&gt;</code>
+  <code class="num">13</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Submit
+  <code class="num">14</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/button&gt;</code>
+  <code class="num">15</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="green">&lt;/form&gt;</code></pre></div>
+  </footer>
 
-การทำงานของ <b>HTML Form</b> จะเริ่มต้นโดย การรับ input จากผู้เข้าชมเว็บไซต์ แล้วจะส่งข้อมูลเหล่านั้น ไปที่เซิฟเวอร์ แล้วทำการประมวลผลต่อไป ส่วนการประมาลผลจะเป็นแบบใดนั้น ก็อยู่ที่เรากำหนดมัน<br /><br />
 
-องค์ประกอบของ <b>Form ใน HTML</b> นั้น อาจจะประกอบไปด้วย ช่องกรอบช้อความ ปุ่มต่าง ๆ ตัวเลือกต่าง ๆ เพื่อใช้ในการรับข้อมูลจากผู้ใช้ ก่อนที่เราจะศึกษาเรื่ององค์ประกอบของฟอร์มนั้น เรามาดู Syntax ของ Form กันก่อนดีกว่าครับ form ใน HTML นั้น จะขึ้นต้นแท็กด้วย &lt;form> และจะปิดท้ายด้วยแท็ก &lt;/form> ซึ่งก็มีรูปแบบตามด้านล่างครับ<br />
+<div class="col-sm-9">
+      <h3> Inline form </h3>
+      
+      <p>
+ การกำหนดรูปแบบ inline form เป็นการทำให้คอนโทรลต่างๆ ของฟอร์มอยู่ในแถวเดียวกัน โดย โดยปกติแล้วหากเราไม่กำหนดค่า .form- inline ในแท็ก < form > คอนโทรลต่างๆ ของฟอ์มจะอยู่ คนละแถว หรือคนละบรรทัด เหมือนกับตัวอย่างแรก แต่หากเรากำหนดค่า .form- inliine เข้าไป คอนโทรลต่างๆ จะอยู่ในแถวเดียวกัน ในการทำ inline form นั้นเราจะต้องทำการกำหนดค่าความ กว้างของคอนโทรล โดยการใช้สไตล์ซีทกำหนดค่า ซึ่งตัวอย่างจะใช้width ในการกำหนดค่าความ กว้างของคอนโทรล หากเราไม่กำหนดเบราเซอร์จะแสดงความกว้างเต็ม 100% ซึ่งจะไม่เห็นความ แตกต่างในการใช้.form-inlineและหากเราไม่ต้องการให้แสดง < label > เราสามารถกำหนดคลาส.sr-only ให้กับ < label > ได้ </p><br>
+ <div class="col-sm-9"><p>
+ <h4>Horizontal form</h4>  เราสามารถจัดกลุ่มของคอนโทรลกับลาเบล (Label)ให้อยู่ในลักษณะของคอลัมน์ โดยการใช้.form-horizontal ร่วมกับกริด (Grid) และ .form-group ในการแบ่งคอลัมน์<br>
+</p>
 
-<pre name="code" class="html">
-<form action="url" method="post|get">
-    form elements
-</form>
-</pre>
-<b>action</b> คือหน้าที่เราต้องการส่งข้อมูลไปเพื่อจัดการกับข้อมูล<br />
-<b>method</b> คือรูปแบบของการส่งข้อมูล มีแบบ get กับ post<br />
-<b>form elements</b> คือองค์ประกอบของ form ต่าง ๆ เช่น textarea, text, checkbox และอื่น ๆ<br />
-
-<h2>ตัวอย่างการใช้งาน form ในภาษา HTML</h2>
-<pre name="code" class="html">
-<form>
-ชื่อ : <input type="text" name="name" />
-นามสกุล : <input type="text" name="lastname" />
-</form>
-</pre>
-ผลลัพธ์ที่ได้ <br />
-<form>
-ชื่อ : <input type="text" name="name" />
-นามสกุล : <input type="text" name="lastname" />
-</form>
-
-<h2>Input type="text"</h2>
-เป็นช่องให้กรอกข้อความ ดูตัวอย่างโค้ด
-<pre name="code" class="html">
-<input type="text" />
-</pre>
-ผลลัพธ์ที่ได้
-<input type="text" />
-
-<h2>Input type="password"</h2>
-เป็นช่องให้กรอกข้อความ ข้อความที่กรอก จะเป็นจุด ๆ ทำให้อ่านไม่ออก ดูตัวอย่างโค้ด
-<pre name="code" class="html">
-<input type="password" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="password" />
-
-<h2>Input type="radio"</h2>
-เป็นช่องวงกลมให้ติ๊ก สามารถจัดเป็นกลุ่ม เลือกได้อันหนึ่งอันใดในกลุ่ม
-<pre name="code" class="html">
-<input type="radio" name="group" value="d1" />
-<input type="radio" name="group" value="d2" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="radio" name="group" value="d1" />
-<input type="radio" name="group" value="d2" />
-
-<h2>Input type="checkbox"</h2>
-เป็นช่องสี่เหลี่ยมให้ติ๊ก เลือกกี่อันก็ได้
-<pre name="code" class="html">
-<input type="checkbox" name="box1" value="d1" />
-<input type="checkbox" name="box2" value="d2" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="checkbox" name="box1" value="d1" />
-<input type="checkbox" name="box2" value="d2" />
-
-<h2>Input type="reset"</h2>
-เป็นปุ่มสำหรับให้ลบ reset ค่าเป็นค่าเริ่มต้นทั้งหมด ที่อยู่ในฟอร์ม
-<pre name="code" class="html">
-<form>
-<input type="text" name="username" />
-<input type="password" name="password" />
-<input type="reset" value="กดปุ่ม เพื่อรีเซตค่าทั้งหมด" />
-</form>
-</pre>
-ผลลัพธ์ที่ได้ 
-<form>
-<input type="text" name="username" />
-<input type="password" name="password" />
-<input type="reset" value="กดปุ่ม เพื่อรีเซตค่าทั้งหมด" />
-</form>
-<script type="text/javascript">
-$j("input[name=username]").val("username");
-$j("input[name=password]").val("username");
-</script>
-
-<h2>Input type="button"</h2>
-เป็นปุ่มธรรมดา ส่วนมาก จะใส่โค้ด javascript เพื่อให้ปุ่มทำงานตาม event ต่าง ๆ 
-<pre name="code" class="html">
-<input type="button" name="btn" value="ปุ่มกด" onclick="alert("www.doesystem.com")" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="button" name="btn" value="ปุ่มกด" onclick="alert("www.doesystem.com")" />
-
-<h2>Input type="submit"</h2>
-เป็นปุ่มซึ่งเมื่อกดแล้ว หมายถึงการยืนยันข้อมูล แล้วส่งข้อมูลไปทำการตรวจสอบทันที
-<pre name="code" class="html">
-<input type="submit" name="btn" value="ตกลง" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="submit" name="btn" value="ตกลง" />
-
-<h2>Input type="image"</h2>
-มีการทำงานเหมือน submit แต่เปลี่ยนจากปุ่ม เป็นรูปภาพแทน
-<pre name="code" class="html">
-<input type="image" src="http://www.doesystem.com/fixed/favicon.ico" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="image" src="http://www.doesystem.com/fixed/favicon.ico" />
-
-<h2>Input type="file"</h2>
-ลักษณะจะแตกต่างกันตามบาวเซอร์ ใช้เพื่อเป็นการ import file จากในเครื่อง ซึ่งในการใช้ type=file จะต้องใส่ enctype="multipart/form-data" ไว้ที่แท็ก form ด้วย
-<pre name="code" class="html">
-<form enctype="multipart/form-data">
-<input type="file" name="file" />
-</form>
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="file" name="file" />
-
-<h2>Input type="hidden"</h2>
-เป็นข้อมูล ที่ถูกซ่อนไว้ จะไม่สามารถมองเห็น ส่วนมากใช้ส่งข้อมูล ที่ไม่ต้องการให้ผู้เยี่ยมชมเว็บไซต์เห็นข้อมูลดังกล่าว
-<pre name="code" class="html">
-<input type="hidden" name="hid" value="datahidden" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="hidden" name="hid" value="datahidden" />
-
-<h2>Select Option ใน HTML</h2>
-เป็นช่องสี่เหลี่ยมมีข้อมูลอยู่ข้างในเพื่อให้เลือก จำนวนของการแสดงผล เท่ากับจำนวนของแท็ก option
-<pre name="code" class="html">
-<select name="sel">
-	<option vale="1">Ex1</option>
-	<option vale="2">Ex2</option>
-	<option vale="3">Ex2</option>
-</select>
-</pre>
-ผลลัพธ์ที่ได้ 
-<select name="sel">
-	<option vale="1">Ex1</option>
-	<option vale="2">Ex2</option>
-	<option vale="3">Ex2</option>
-</select>
-
-<h2>Textarea ใน HTML</h2>
-มีลักษณะเป็นพื้นที่ให้ใส่ข้อมูล มีหลายแถว หลายคอลัมน์
-<pre name="code" class="html">
-<textarea></textarea>
-</pre>
-ผลลัพธ์ที่ได้ 
-<textarea></textarea>
-<br /><br />
-
-<h1>ตัวอย่าง การส่งคำค้นหาไปค้นหาใน google</h1>
-<pre name="code" class="html">
-<form action="http://www.google.com/search" mathod="get" target="_blank">
-ค้นหาคำใน google <input type="text" name="q" /> <input type="submit" value="ค้นหาใน google" />
-</form>
-</pre>
-<form action="http://www.google.com/search" mathod="get" target="_blank">
-ค้นหาคำใน google <input type="text" name="q" /> <input type="submit" value="ค้นหาใน google" />
-</form></div><!-- website-doesystem --><ins class="adsbygoogle"
-				style="display:block"
-				data-ad-client="ca-pub-5523444906108756"
-				data-ad-slot="7175985400"
-				data-ad-format="auto"></ins><fieldset><legend><span class="fb-comments-count" data-href="http://www.doesystem.com/4b25de9d8540cb0b6d2e845915172d35/การสร้าง-Form-ในภาษา-HTML.htm"></span> awesome comments</legend><div class="fb-comments" data-href="http://www.doesystem.com/4b25de9d8540cb0b6d2e845915172d35/การสร้าง-Form-ในภาษา-HTML.htm" data-numposts="5" data-colorscheme="light" data-width="100%"></div></fieldset><hr /><!-- <h1>การสร้าง Form ในภาษา HTML</h1>
-<b>HTML Form</b> ถูกใช้เมื่อต้องการเก็บข้อมูลอะไรบางอย่าง จากผู้เข้าชมเว็บไซต์ เช่น ข้อมูลประจำตัว ข้อมลการเยี่ยมชมต่าง ๆ และอื่น ๆ อีกมาก<br /><br />
-
-การทำงานของ <b>HTML Form</b> จะเริ่มต้นโดย การรับ input จากผู้เข้าชมเว็บไซต์ แล้วจะส่งข้อมูลเหล่านั้น ไปที่เซิฟเวอร์ แล้วทำการประมวลผลต่อไป ส่วนการประมาลผลจะเป็นแบบใดนั้น ก็อยู่ที่เรากำหนดมัน<br /><br />
-
-องค์ประกอบของ <b>Form ใน HTML</b> นั้น อาจจะประกอบไปด้วย ช่องกรอบช้อความ ปุ่มต่าง ๆ ตัวเลือกต่าง ๆ เพื่อใช้ในการรับข้อมูลจากผู้ใช้ ก่อนที่เราจะศึกษาเรื่ององค์ประกอบของฟอร์มนั้น เรามาดู Syntax ของ Form กันก่อนดีกว่าครับ form ใน HTML นั้น จะขึ้นต้นแท็กด้วย &lt;form> และจะปิดท้ายด้วยแท็ก &lt;/form> ซึ่งก็มีรูปแบบตามด้านล่างครับ<br />
-
-<pre name="code" class="html">
-<form action="url" method="post|get">
-    form elements
-</form>
-</pre>
-<b>action</b> คือหน้าที่เราต้องการส่งข้อมูลไปเพื่อจัดการกับข้อมูล<br />
-<b>method</b> คือรูปแบบของการส่งข้อมูล มีแบบ get กับ post<br />
-<b>form elements</b> คือองค์ประกอบของ form ต่าง ๆ เช่น textarea, text, checkbox และอื่น ๆ<br />
-
-<h2>ตัวอย่างการใช้งาน form ในภาษา HTML</h2>
-<pre name="code" class="html">
-<form>
-ชื่อ : <input type="text" name="name" />
-นามสกุล : <input type="text" name="lastname" />
-</form>
-</pre>
-ผลลัพธ์ที่ได้ <br />
-<form>
-ชื่อ : <input type="text" name="name" />
-นามสกุล : <input type="text" name="lastname" />
-</form>
-
-<h2>Input type="text"</h2>
-เป็นช่องให้กรอกข้อความ ดูตัวอย่างโค้ด
-<pre name="code" class="html">
-<input type="text" />
-</pre>
-ผลลัพธ์ที่ได้
-<input type="text" />
-
-<h2>Input type="password"</h2>
-เป็นช่องให้กรอกข้อความ ข้อความที่กรอก จะเป็นจุด ๆ ทำให้อ่านไม่ออก ดูตัวอย่างโค้ด
-<pre name="code" class="html">
-<input type="password" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="password" />
-
-<h2>Input type="radio"</h2>
-เป็นช่องวงกลมให้ติ๊ก สามารถจัดเป็นกลุ่ม เลือกได้อันหนึ่งอันใดในกลุ่ม
-<pre name="code" class="html">
-<input type="radio" name="group" value="d1" />
-<input type="radio" name="group" value="d2" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="radio" name="group" value="d1" />
-<input type="radio" name="group" value="d2" />
-
-<h2>Input type="checkbox"</h2>
-เป็นช่องสี่เหลี่ยมให้ติ๊ก เลือกกี่อันก็ได้
-<pre name="code" class="html">
-<input type="checkbox" name="box1" value="d1" />
-<input type="checkbox" name="box2" value="d2" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="checkbox" name="box1" value="d1" />
-<input type="checkbox" name="box2" value="d2" />
-
-<h2>Input type="reset"</h2>
-เป็นปุ่มสำหรับให้ลบ reset ค่าเป็นค่าเริ่มต้นทั้งหมด ที่อยู่ในฟอร์ม
-<pre name="code" class="html">
-<form>
-<input type="text" name="username" />
-<input type="password" name="password" />
-<input type="reset" value="กดปุ่ม เพื่อรีเซตค่าทั้งหมด" />
-</form>
-</pre>
-ผลลัพธ์ที่ได้ 
-<form>
-<input type="text" name="username" />
-<input type="password" name="password" />
-<input type="reset" value="กดปุ่ม เพื่อรีเซตค่าทั้งหมด" />
-</form>
-<script type="text/javascript">
-$j("input[name=username]").val("username");
-$j("input[name=password]").val("username");
-</script>
-
-<h2>Input type="button"</h2>
-เป็นปุ่มธรรมดา ส่วนมาก จะใส่โค้ด javascript เพื่อให้ปุ่มทำงานตาม event ต่าง ๆ 
-<pre name="code" class="html">
-<input type="button" name="btn" value="ปุ่มกด" onclick="alert("www.doesystem.com")" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="button" name="btn" value="ปุ่มกด" onclick="alert("www.doesystem.com")" />
-
-<h2>Input type="submit"</h2>
-เป็นปุ่มซึ่งเมื่อกดแล้ว หมายถึงการยืนยันข้อมูล แล้วส่งข้อมูลไปทำการตรวจสอบทันที
-<pre name="code" class="html">
-<input type="submit" name="btn" value="ตกลง" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="submit" name="btn" value="ตกลง" />
-
-<h2>Input type="image"</h2>
-มีการทำงานเหมือน submit แต่เปลี่ยนจากปุ่ม เป็นรูปภาพแทน
-<pre name="code" class="html">
-<input type="image" src="http://www.doesystem.com/fixed/favicon.ico" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="image" src="http://www.doesystem.com/fixed/favicon.ico" />
-
-<h2>Input type="file"</h2>
-ลักษณะจะแตกต่างกันตามบาวเซอร์ ใช้เพื่อเป็นการ import file จากในเครื่อง ซึ่งในการใช้ type=file จะต้องใส่ enctype="multipart/form-data" ไว้ที่แท็ก form ด้วย
-<pre name="code" class="html">
-<form enctype="multipart/form-data">
-<input type="file" name="file" />
-</form>
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="file" name="file" />
-
-<h2>Input type="hidden"</h2>
-เป็นข้อมูล ที่ถูกซ่อนไว้ จะไม่สามารถมองเห็น ส่วนมากใช้ส่งข้อมูล ที่ไม่ต้องการให้ผู้เยี่ยมชมเว็บไซต์เห็นข้อมูลดังกล่าว
-<pre name="code" class="html">
-<input type="hidden" name="hid" value="datahidden" />
-</pre>
-ผลลัพธ์ที่ได้ 
-<input type="hidden" name="hid" value="datahidden" />
-
-<h2>Select Option ใน HTML</h2>
-เป็นช่องสี่เหลี่ยมมีข้อมูลอยู่ข้างในเพื่อให้เลือก จำนวนของการแสดงผล เท่ากับจำนวนของแท็ก option
-<pre name="code" class="html">
-<select name="sel">
-	<option vale="1">Ex1</option>
-	<option vale="2">Ex2</option>
-	<option vale="3">Ex2</option>
-</select>
-</pre>
-ผลลัพธ์ที่ได้ 
-<select name="sel">
-	<option vale="1">Ex1</option>
-	<option vale="2">Ex2</option>
-	<option vale="3">Ex2</option>
-</select>
-
-<h2>Textarea ใน HTML</h2>
-มีลักษณะเป็นพื้นที่ให้ใส่ข้อมูล มีหลายแถว หลายคอลัมน์
-<pre name="code" class="html">
-<textarea></textarea>
-</pre>
-ผลลัพธ์ที่ได้ 
-<textarea></textarea>
-<br /><br />
-
-<h1>ตัวอย่าง การส่งคำค้นหาไปค้นหาใน google</h1>
-<pre name="code" class="html">
-<form action="http://www.google.com/search" mathod="get" target="_blank">
-ค้นหาคำใน google <input type="text" name="q" /> <input type="submit" value="ค้นหาใน google" />
-</form>
-</pre>
-<form action="http://www.google.com/search" mathod="get" target="_blank">
-ค้นหาคำใน google <input type="text" name="q" /> <input type="submit" value="ค้นหาใน google" />
-</form> -->	</div>
-                   </p>
-            </div>
+      <br><br>
+      
+      
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
         </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+
 
 </body>
 </html>
